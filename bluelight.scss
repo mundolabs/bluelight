@@ -42,23 +42,20 @@ body {
     max-width: 2000pt;
     background-color: theme.$background-colour;
     min-height: 900pt;
-    //background-image: url(../images/b2g.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top left;
-
 }
 
 .content {
+    margin: 0pt;
+    padding: 10pt 20pt 15pt 20pt;
+
     &.--with-sidebar {
         margin: 0 0 0 195pt;
-        padding: 5pt 20pt 15pt 20pt;
     }
 
     &.--with-toolbar {
-        padding: 50pt 20pt 15pt 20pt;
+        padding: 55pt 20pt 15pt 20pt;
     }
+
 }
 
 $colourArray:
@@ -211,7 +208,7 @@ $colourArray:
     position: fixed;
     color: theme.$text-colour;
     overflow: scroll;
-    border-right: 1px solid theme.$grey-700;
+    border-right: 1pt solid theme.$grey-700;
 
     .__content {
         padding: 15pt 20pt;
@@ -333,4 +330,76 @@ $colourArray:
 
 .card::before {
     opacity: 0.5;
+}
+
+/* ====== NAVBAR ====== */
+
+.navbar {
+    padding: 15pt 20pt;
+    
+    background-color: rgba(theme.$background-colour, 0.5);
+    color: theme.$text-colour;
+    backdrop-filter: blur(10pt);
+    -webkit-backdrop-filter: blur(10pt);
+    z-index: 5;
+    width: 100%;
+    max-width: 1960pt;
+    top: 0;
+    overflow: hidden;
+    border-bottom: 1pt solid theme.$grey-700;
+
+    font-size: 11pt;
+    font-weight: 400;
+
+    .__navLogo {
+        font-size: 10pt;
+        margin: 0;
+    }
+
+    &.--isFixed {
+        position: sticky;
+        position: -webkit-sticky;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+        margin-right: 25pt;
+        
+
+        li:not(.__navLogo) {
+            float: right;
+    
+            a {
+                margin: 0 15pt;
+            }
+    
+        }
+          
+        a {
+            float: left;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s;
+            margin: 0;
+            cursor: pointer;
+            color: rgba(theme.$text-colour, 0.7);
+    
+            &:hover:not(.--active) {
+                color: rgba(theme.$text-colour, 1);
+            }
+        }
+
+        .--active {
+            color: rgba(theme.$text-colour, 1);
+        }
+    }   
+}
+
+p {
+    margin: 0;
 }

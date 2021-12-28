@@ -46,18 +46,17 @@ body {
   max-width: 2000pt;
   background-color: #000000;
   min-height: 900pt;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top left;
 }
 
+.content {
+  margin: 0pt;
+  padding: 10pt 20pt 15pt 20pt;
+}
 .content.--with-sidebar {
   margin: 0 0 0 195pt;
-  padding: 5pt 20pt 15pt 20pt;
 }
 .content.--with-toolbar {
-  padding: 50pt 20pt 15pt 20pt;
+  padding: 55pt 20pt 15pt 20pt;
 }
 
 .--bg-white {
@@ -963,7 +962,7 @@ body {
   position: fixed;
   color: #FFFFFF;
   overflow: scroll;
-  border-right: 1px solid #4F4F50;
+  border-right: 1pt solid #4F4F50;
 }
 .sidebar .__content {
   padding: 15pt 20pt;
@@ -1066,6 +1065,64 @@ body {
 
 .card::before {
   opacity: 0.5;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  padding: 15pt 20pt;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  backdrop-filter: blur(10pt);
+  -webkit-backdrop-filter: blur(10pt);
+  z-index: 5;
+  width: 100%;
+  max-width: 1960pt;
+  top: 0;
+  overflow: hidden;
+  border-bottom: 1pt solid #4F4F50;
+  font-size: 11pt;
+  font-weight: 400;
+}
+.navbar .__navLogo {
+  font-size: 10pt;
+  margin: 0;
+}
+.navbar.--isFixed {
+  position: sticky;
+  position: -webkit-sticky;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-right: 25pt;
+}
+.navbar ul li:not(.__navLogo) {
+  float: right;
+}
+.navbar ul li:not(.__navLogo) a {
+  margin: 0 15pt;
+}
+.navbar ul a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 0;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+.navbar ul a:hover:not(.--active) {
+  color: white;
+}
+.navbar ul .--active {
+  color: white;
+}
+
+p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=bluelight.css.map */
