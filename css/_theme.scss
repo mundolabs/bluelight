@@ -1,0 +1,104 @@
+/* ========================  /
+/  ====== FOUNDATION ======  /
+/  ======================== */
+
+/* ====== COLOURS ====== */
+
+$white: #FFFFFF;
+$onWhite: #000000;
+$black: #000000;
+$onBlack: #FFFFFF;
+
+/* Greyscale */
+$grey-100: #F5F5F5;
+$onGrey-100: $black;
+$grey-200: #E9E9E9;
+$onGrey-200: $black;
+$grey-300: #DEDEDE;
+$onGrey-300: $black;
+$grey-400: #C9C9C9;
+$onGrey-400: $black;
+$grey-500: #A7A7A7;
+$onGrey-500: $black;
+$grey-600: #7C7C7C;
+$onGrey-600: $white;
+$grey-700: #4F4F50;
+$onGrey-700: $white;
+$grey-800: #353535;
+$onGrey-800: $white;
+$grey-900: #1F1F1F;
+$onGrey-900: $white;
+
+/* Blue */
+$blue-100: #A8D2FF;
+$onBlue-100: $black;
+$blue-200: #5EABFF;
+$onBlue-200: $black;
+$blue-300: #268EFF;
+$onBlue-300: $white;
+$blue-400: #007AFF;
+$onBlue-400: $white;
+$blue-500: #0066D6;
+$onBlue-500: $white;
+$blue-600: #005AB5;
+$onBlue-600: $white;
+$blue-700: #004A9A;
+$onBlue-700: $white;
+$blue-800: #003774;
+$onBlue-800: $white;
+$blue-900: #002853;
+$onBlue-900: $white;
+
+/* Red */
+$red-100: #FFB2B2;
+$onRed-100: $black;
+$red-200: #FF7C7C;
+$onRed-200: $black;
+$red-300: #FD5353;
+$onRed-300: $black;
+$red-400: #F42727;
+$onRed-400: $white;
+$red-500: #E41515;
+$onRed-500: $white;
+$red-600: #D31818;
+$onRed-600: $white;
+$red-700: #C30000;
+$onRed-700: $white;
+$red-800: #A50C0C;
+$onRed-800: $white;
+$red-900: #7C0202;
+$onRed-900: $white;
+
+/* Green */
+$green-100: #C3FFD4;
+$onGreen-100: $black;
+$green-200: #84FFA6;
+$onGreen-200: $black;
+$green-300: #3AFF71;
+$onGreen-300: $black;
+$green-400: #0EEA4B;
+$onGreen-400: $black;
+$green-500: #13D44A;
+$onGreen-500: $black;
+$green-600: #00B834;
+$onGreen-600: $white;
+$green-700: #099D33;
+$onGreen-700: $white;
+$green-800: #108631;
+$onGreen-800: $white;
+$green-900: #086322;
+$onGreen-900: $white;
+
+$background-colour: $black;
+$text-colour: $white;
+
+/* ====== SHAPES ====== */
+
+/* Corner Radius */
+$button-cornerRadius: 5pt;
+$button-cornerRadius--hover: 5pt;
+$sidebarMenu-cornerRadius: 5pt;
+$card-cornerRadius: 5pt;
+
+/* ====== TYPOGRAPHY ====== */
+$primaryFont: "Inter", "Helvetica Neue", sans-serif;

@@ -1,0 +1,1071 @@
+/*
+
+    ######   #        #     #  #######  #        ###   #####   #     #  ####### 
+    #     #  #        #     #  #        #         #   #     #  #     #     #    
+    #     #  #        #     #  #        #         #   #        #     #     #    
+    ######   #        #     #  #####    #         #   #  ####  #######     #    
+    #     #  #        #     #  #        #         #   #     #  #     #     #    
+    #     #  #        #     #  #        #         #   #     #  #     #     #    
+    ######   #######   #####   #######  #######  ###   #####   #     #     #    
+
+    ===========================================================================
+
+    Developed by Mundo Labs
+    mundolabs.cc
+
+*/
+/* ====== CONFIG ====== */
+/* Theme */
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* ========================  /
+/  ====== FOUNDATION ======  /
+/  ======================== */
+/* ====== COLOURS ====== */
+/* Greyscale */
+/* Blue */
+/* Red */
+/* Green */
+/* ====== SHAPES ====== */
+/* Corner Radius */
+/* ====== TYPOGRAPHY ====== */
+/* ========================  /
+/  ====== COMPONENTS ======  /
+/  ======================== */
+body {
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  color: #FFFFFF;
+  background-color: #E9E9E9;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  margin: auto;
+  padding: 0;
+  max-width: 2000pt;
+  background-color: #000000;
+  min-height: 900pt;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top left;
+}
+
+.content.--with-sidebar {
+  margin: 0 0 0 195pt;
+  padding: 5pt 20pt 15pt 20pt;
+}
+.content.--with-toolbar {
+  padding: 50pt 20pt 15pt 20pt;
+}
+
+.--bg-white {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.--colour-white {
+  color: #FFFFFF;
+}
+
+.--bg-black {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.--colour-black {
+  color: #000000;
+}
+
+.--bg-grey-100 {
+  background: #F5F5F5;
+  color: #000000;
+}
+
+.--colour-grey-100 {
+  color: #F5F5F5;
+}
+
+.--bg-grey-200 {
+  background: #E9E9E9;
+  color: #000000;
+}
+
+.--colour-grey-200 {
+  color: #E9E9E9;
+}
+
+.--bg-grey-300 {
+  background: #DEDEDE;
+  color: #000000;
+}
+
+.--colour-grey-300 {
+  color: #DEDEDE;
+}
+
+.--bg-grey-400 {
+  background: #C9C9C9;
+  color: #000000;
+}
+
+.--colour-grey-400 {
+  color: #C9C9C9;
+}
+
+.--bg-grey-500 {
+  background: #A7A7A7;
+  color: #000000;
+}
+
+.--colour-grey-500 {
+  color: #A7A7A7;
+}
+
+.--bg-grey-600 {
+  background: #7C7C7C;
+  color: #FFFFFF;
+}
+
+.--colour-grey-600 {
+  color: #7C7C7C;
+}
+
+.--bg-grey-700 {
+  background: #4F4F50;
+  color: #FFFFFF;
+}
+
+.--colour-grey-700 {
+  color: #4F4F50;
+}
+
+.--bg-grey-800 {
+  background: #353535;
+  color: #FFFFFF;
+}
+
+.--colour-grey-800 {
+  color: #353535;
+}
+
+.--bg-grey-900 {
+  background: #1F1F1F;
+  color: #FFFFFF;
+}
+
+.--colour-grey-900 {
+  color: #1F1F1F;
+}
+
+.--bg-blue-100 {
+  background: #A8D2FF;
+  color: #000000;
+}
+
+.--colour-blue-100 {
+  color: #A8D2FF;
+}
+
+.--bg-blue-200 {
+  background: #5EABFF;
+  color: #000000;
+}
+
+.--colour-blue-200 {
+  color: #5EABFF;
+}
+
+.--bg-blue-300 {
+  background: #268EFF;
+  color: #FFFFFF;
+}
+
+.--colour-blue-300 {
+  color: #268EFF;
+}
+
+.--bg-blue-400 {
+  background: #007AFF;
+  color: #FFFFFF;
+}
+
+.--colour-blue-400 {
+  color: #007AFF;
+}
+
+.--bg-blue-500 {
+  background: #0066D6;
+  color: #FFFFFF;
+}
+
+.--colour-blue-500 {
+  color: #0066D6;
+}
+
+.--bg-blue-600 {
+  background: #005AB5;
+  color: #FFFFFF;
+}
+
+.--colour-blue-600 {
+  color: #005AB5;
+}
+
+.--bg-blue-700 {
+  background: #004A9A;
+  color: #FFFFFF;
+}
+
+.--colour-blue-700 {
+  color: #004A9A;
+}
+
+.--bg-blue-800 {
+  background: #003774;
+  color: #FFFFFF;
+}
+
+.--colour-blue-800 {
+  color: #003774;
+}
+
+.--bg-blue-900 {
+  background: #002853;
+  color: #FFFFFF;
+}
+
+.--colour-blue-900 {
+  color: #002853;
+}
+
+.--bg-red-100 {
+  background: #FFB2B2;
+  color: #000000;
+}
+
+.--colour-red-100 {
+  color: #FFB2B2;
+}
+
+.--bg-red-200 {
+  background: #FF7C7C;
+  color: #000000;
+}
+
+.--colour-red-200 {
+  color: #FF7C7C;
+}
+
+.--bg-red-300 {
+  background: #FD5353;
+  color: #000000;
+}
+
+.--colour-red-300 {
+  color: #FD5353;
+}
+
+.--bg-red-400 {
+  background: #F42727;
+  color: #FFFFFF;
+}
+
+.--colour-red-400 {
+  color: #F42727;
+}
+
+.--bg-red-500 {
+  background: #E41515;
+  color: #FFFFFF;
+}
+
+.--colour-red-500 {
+  color: #E41515;
+}
+
+.--bg-red-600 {
+  background: #D31818;
+  color: #FFFFFF;
+}
+
+.--colour-red-600 {
+  color: #D31818;
+}
+
+.--bg-red-700 {
+  background: #C30000;
+  color: #FFFFFF;
+}
+
+.--colour-red-700 {
+  color: #C30000;
+}
+
+.--bg-red-800 {
+  background: #A50C0C;
+  color: #FFFFFF;
+}
+
+.--colour-red-800 {
+  color: #A50C0C;
+}
+
+.--bg-red-900 {
+  background: #7C0202;
+  color: #FFFFFF;
+}
+
+.--colour-red-900 {
+  color: #7C0202;
+}
+
+.--bg-green-100 {
+  background: #C3FFD4;
+  color: #000000;
+}
+
+.--colour-green-100 {
+  color: #C3FFD4;
+}
+
+.--bg-green-200 {
+  background: #84FFA6;
+  color: #000000;
+}
+
+.--colour-green-200 {
+  color: #84FFA6;
+}
+
+.--bg-green-300 {
+  background: #3AFF71;
+  color: #000000;
+}
+
+.--colour-green-300 {
+  color: #3AFF71;
+}
+
+.--bg-green-400 {
+  background: #0EEA4B;
+  color: #000000;
+}
+
+.--colour-green-400 {
+  color: #0EEA4B;
+}
+
+.--bg-green-500 {
+  background: #13D44A;
+  color: #000000;
+}
+
+.--colour-green-500 {
+  color: #13D44A;
+}
+
+.--bg-green-600 {
+  background: #00B834;
+  color: #FFFFFF;
+}
+
+.--colour-green-600 {
+  color: #00B834;
+}
+
+.--bg-green-700 {
+  background: #099D33;
+  color: #FFFFFF;
+}
+
+.--colour-green-700 {
+  color: #099D33;
+}
+
+.--bg-green-800 {
+  background: #108631;
+  color: #FFFFFF;
+}
+
+.--colour-green-800 {
+  color: #108631;
+}
+
+.--bg-green-900 {
+  background: #086322;
+  color: #FFFFFF;
+}
+
+.--colour-green-900 {
+  color: #086322;
+}
+
+/* ====== BUTTONS ====== */
+.button {
+  border-radius: 5pt;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  padding: 6pt 5pt;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 12pt;
+  height: 28pt;
+}
+.button p {
+  padding: 0;
+  margin: 0pt 3pt 0 3pt;
+  float: right;
+}
+.button .material-icons {
+  vertical-align: top;
+  margin: -1pt 0 0 0;
+  padding: 0;
+  font-size: 16pt;
+}
+.button:hover {
+  border-radius: 5pt;
+  scale: 1.05;
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.button:disabled:hover {
+  border-radius: 5pt;
+  scale: 1;
+}
+.button.--small {
+  border-radius: 3pt;
+  font-size: 10pt;
+  height: 18pt;
+  padding: 3pt 6pt 3pt 4pt;
+}
+.button.--small .material-icons {
+  vertical-align: top;
+  margin: -0.25pt 0 0 0;
+  font-size: 11pt;
+}
+.button.--small p {
+  margin: 0 0 0 1pt;
+}
+.button.--small:hover {
+  border-radius: 3pt;
+}
+.button.--small:disabled:hover {
+  border-radius: 3pt;
+  scale: 1;
+}
+
+.button.--primary.--white {
+  background: linear-gradient(125deg, #FFFFFF 35%, #e6e6e6);
+  color: #000000;
+}
+
+.button.--secondary.--white {
+  background: transparent;
+  color: #FFFFFF;
+}
+.button.--secondary.--white:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.button.--primary.--black {
+  background: linear-gradient(125deg, #000000 35%, black);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--black {
+  background: transparent;
+  color: #000000;
+}
+.button.--secondary.--black:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.button.--primary.--grey-100 {
+  background: linear-gradient(125deg, #F5F5F5 35%, gainsboro);
+  color: #000000;
+}
+
+.button.--secondary.--grey-100 {
+  background: transparent;
+  color: #F5F5F5;
+}
+.button.--secondary.--grey-100:hover {
+  background: rgba(245, 245, 245, 0.1);
+}
+
+.button.--primary.--grey-200 {
+  background: linear-gradient(125deg, #E9E9E9 35%, #d0d0d0);
+  color: #000000;
+}
+
+.button.--secondary.--grey-200 {
+  background: transparent;
+  color: #E9E9E9;
+}
+.button.--secondary.--grey-200:hover {
+  background: rgba(233, 233, 233, 0.1);
+}
+
+.button.--primary.--grey-300 {
+  background: linear-gradient(125deg, #DEDEDE 35%, #c5c5c5);
+  color: #000000;
+}
+
+.button.--secondary.--grey-300 {
+  background: transparent;
+  color: #DEDEDE;
+}
+.button.--secondary.--grey-300:hover {
+  background: rgba(222, 222, 222, 0.1);
+}
+
+.button.--primary.--grey-400 {
+  background: linear-gradient(125deg, #C9C9C9 35%, #b0b0b0);
+  color: #000000;
+}
+
+.button.--secondary.--grey-400 {
+  background: transparent;
+  color: #C9C9C9;
+}
+.button.--secondary.--grey-400:hover {
+  background: rgba(201, 201, 201, 0.1);
+}
+
+.button.--primary.--grey-500 {
+  background: linear-gradient(125deg, #A7A7A7 35%, #8e8e8e);
+  color: #000000;
+}
+
+.button.--secondary.--grey-500 {
+  background: transparent;
+  color: #A7A7A7;
+}
+.button.--secondary.--grey-500:hover {
+  background: rgba(167, 167, 167, 0.1);
+}
+
+.button.--primary.--grey-600 {
+  background: linear-gradient(125deg, #7C7C7C 35%, #636363);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--grey-600 {
+  background: transparent;
+  color: #7C7C7C;
+}
+.button.--secondary.--grey-600:hover {
+  background: rgba(124, 124, 124, 0.1);
+}
+
+.button.--primary.--grey-700 {
+  background: linear-gradient(125deg, #4F4F50 35%, #363636);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--grey-700 {
+  background: transparent;
+  color: #4F4F50;
+}
+.button.--secondary.--grey-700:hover {
+  background: rgba(79, 79, 80, 0.1);
+}
+
+.button.--primary.--grey-800 {
+  background: linear-gradient(125deg, #353535 35%, #1c1c1c);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--grey-800 {
+  background: transparent;
+  color: #353535;
+}
+.button.--secondary.--grey-800:hover {
+  background: rgba(53, 53, 53, 0.1);
+}
+
+.button.--primary.--grey-900 {
+  background: linear-gradient(125deg, #1F1F1F 35%, #060606);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--grey-900 {
+  background: transparent;
+  color: #1F1F1F;
+}
+.button.--secondary.--grey-900:hover {
+  background: rgba(31, 31, 31, 0.1);
+}
+
+.button.--primary.--blue-100 {
+  background: linear-gradient(125deg, #A8D2FF 35%, #75b8ff);
+  color: #000000;
+}
+
+.button.--secondary.--blue-100 {
+  background: transparent;
+  color: #A8D2FF;
+}
+.button.--secondary.--blue-100:hover {
+  background: rgba(168, 210, 255, 0.1);
+}
+
+.button.--primary.--blue-200 {
+  background: linear-gradient(125deg, #5EABFF 35%, #2b90ff);
+  color: #000000;
+}
+
+.button.--secondary.--blue-200 {
+  background: transparent;
+  color: #5EABFF;
+}
+.button.--secondary.--blue-200:hover {
+  background: rgba(94, 171, 255, 0.1);
+}
+
+.button.--primary.--blue-300 {
+  background: linear-gradient(125deg, #268EFF 35%, #0074f2);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--blue-300 {
+  background: transparent;
+  color: #268EFF;
+}
+.button.--secondary.--blue-300:hover {
+  background: rgba(38, 142, 255, 0.1);
+}
+
+.button.--primary.--blue-400 {
+  background: linear-gradient(125deg, #007AFF 35%, #0062cc);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--blue-400 {
+  background: transparent;
+  color: #007AFF;
+}
+.button.--secondary.--blue-400:hover {
+  background: rgba(0, 122, 255, 0.1);
+}
+
+.button.--primary.--blue-500 {
+  background: linear-gradient(125deg, #0066D6 35%, #004ea3);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--blue-500 {
+  background: transparent;
+  color: #0066D6;
+}
+.button.--secondary.--blue-500:hover {
+  background: rgba(0, 102, 214, 0.1);
+}
+
+.button.--primary.--blue-600 {
+  background: linear-gradient(125deg, #005AB5 35%, #004182);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--blue-600 {
+  background: transparent;
+  color: #005AB5;
+}
+.button.--secondary.--blue-600:hover {
+  background: rgba(0, 90, 181, 0.1);
+}
+
+.button.--primary.--blue-700 {
+  background: linear-gradient(125deg, #004A9A 35%, #003167);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--blue-700 {
+  background: transparent;
+  color: #004A9A;
+}
+.button.--secondary.--blue-700:hover {
+  background: rgba(0, 74, 154, 0.1);
+}
+
+.button.--primary.--blue-800 {
+  background: linear-gradient(125deg, #003774 35%, #001f41);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--blue-800 {
+  background: transparent;
+  color: #003774;
+}
+.button.--secondary.--blue-800:hover {
+  background: rgba(0, 55, 116, 0.1);
+}
+
+.button.--primary.--blue-900 {
+  background: linear-gradient(125deg, #002853 35%, #000f20);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--blue-900 {
+  background: transparent;
+  color: #002853;
+}
+.button.--secondary.--blue-900:hover {
+  background: rgba(0, 40, 83, 0.1);
+}
+
+.button.--primary.--red-100 {
+  background: linear-gradient(125deg, #FFB2B2 35%, #ff7f7f);
+  color: #000000;
+}
+
+.button.--secondary.--red-100 {
+  background: transparent;
+  color: #FFB2B2;
+}
+.button.--secondary.--red-100:hover {
+  background: rgba(255, 178, 178, 0.1);
+}
+
+.button.--primary.--red-200 {
+  background: linear-gradient(125deg, #FF7C7C 35%, #ff4949);
+  color: #000000;
+}
+
+.button.--secondary.--red-200 {
+  background: transparent;
+  color: #FF7C7C;
+}
+.button.--secondary.--red-200:hover {
+  background: rgba(255, 124, 124, 0.1);
+}
+
+.button.--primary.--red-300 {
+  background: linear-gradient(125deg, #FD5353 35%, #fc2121);
+  color: #000000;
+}
+
+.button.--secondary.--red-300 {
+  background: transparent;
+  color: #FD5353;
+}
+.button.--secondary.--red-300:hover {
+  background: rgba(253, 83, 83, 0.1);
+}
+
+.button.--primary.--red-400 {
+  background: linear-gradient(125deg, #F42727 35%, #dd0b0b);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--red-400 {
+  background: transparent;
+  color: #F42727;
+}
+.button.--secondary.--red-400:hover {
+  background: rgba(244, 39, 39, 0.1);
+}
+
+.button.--primary.--red-500 {
+  background: linear-gradient(125deg, #E41515 35%, #b51111);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--red-500 {
+  background: transparent;
+  color: #E41515;
+}
+.button.--secondary.--red-500:hover {
+  background: rgba(228, 21, 21, 0.1);
+}
+
+.button.--primary.--red-600 {
+  background: linear-gradient(125deg, #D31818 35%, #a51313);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--red-600 {
+  background: transparent;
+  color: #D31818;
+}
+.button.--secondary.--red-600:hover {
+  background: rgba(211, 24, 24, 0.1);
+}
+
+.button.--primary.--red-700 {
+  background: linear-gradient(125deg, #C30000 35%, #900000);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--red-700 {
+  background: transparent;
+  color: #C30000;
+}
+.button.--secondary.--red-700:hover {
+  background: rgba(195, 0, 0, 0.1);
+}
+
+.button.--primary.--red-800 {
+  background: linear-gradient(125deg, #A50C0C 35%, #750909);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--red-800 {
+  background: transparent;
+  color: #A50C0C;
+}
+.button.--secondary.--red-800:hover {
+  background: rgba(165, 12, 12, 0.1);
+}
+
+.button.--primary.--red-900 {
+  background: linear-gradient(125deg, #7C0202 35%, #4a0101);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--red-900 {
+  background: transparent;
+  color: #7C0202;
+}
+.button.--secondary.--red-900:hover {
+  background: rgba(124, 2, 2, 0.1);
+}
+
+.button.--primary.--green-100 {
+  background: linear-gradient(125deg, #C3FFD4 35%, #90ffaf);
+  color: #000000;
+}
+
+.button.--secondary.--green-100 {
+  background: transparent;
+  color: #C3FFD4;
+}
+.button.--secondary.--green-100:hover {
+  background: rgba(195, 255, 212, 0.1);
+}
+
+.button.--primary.--green-200 {
+  background: linear-gradient(125deg, #84FFA6 35%, #51ff81);
+  color: #000000;
+}
+
+.button.--secondary.--green-200 {
+  background: transparent;
+  color: #84FFA6;
+}
+.button.--secondary.--green-200:hover {
+  background: rgba(132, 255, 166, 0.1);
+}
+
+.button.--primary.--green-300 {
+  background: linear-gradient(125deg, #3AFF71 35%, #07ff4c);
+  color: #000000;
+}
+
+.button.--secondary.--green-300 {
+  background: transparent;
+  color: #3AFF71;
+}
+.button.--secondary.--green-300:hover {
+  background: rgba(58, 255, 113, 0.1);
+}
+
+.button.--primary.--green-400 {
+  background: linear-gradient(125deg, #0EEA4B 35%, #0bba3c);
+  color: #000000;
+}
+
+.button.--secondary.--green-400 {
+  background: transparent;
+  color: #0EEA4B;
+}
+.button.--secondary.--green-400:hover {
+  background: rgba(14, 234, 75, 0.1);
+}
+
+.button.--primary.--green-500 {
+  background: linear-gradient(125deg, #13D44A 35%, #0fa53a);
+  color: #000000;
+}
+
+.button.--secondary.--green-500 {
+  background: transparent;
+  color: #13D44A;
+}
+.button.--secondary.--green-500:hover {
+  background: rgba(19, 212, 74, 0.1);
+}
+
+.button.--primary.--green-600 {
+  background: linear-gradient(125deg, #00B834 35%, #008526);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--green-600 {
+  background: transparent;
+  color: #00B834;
+}
+.button.--secondary.--green-600:hover {
+  background: rgba(0, 184, 52, 0.1);
+}
+
+.button.--primary.--green-700 {
+  background: linear-gradient(125deg, #099D33 35%, #066d23);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--green-700 {
+  background: transparent;
+  color: #099D33;
+}
+.button.--secondary.--green-700:hover {
+  background: rgba(9, 157, 51, 0.1);
+}
+
+.button.--primary.--green-800 {
+  background: linear-gradient(125deg, #108631 35%, #0b5820);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--green-800 {
+  background: transparent;
+  color: #108631;
+}
+.button.--secondary.--green-800:hover {
+  background: rgba(16, 134, 49, 0.1);
+}
+
+.button.--primary.--green-900 {
+  background: linear-gradient(125deg, #086322 35%, #043412);
+  color: #FFFFFF;
+}
+
+.button.--secondary.--green-900 {
+  background: transparent;
+  color: #086322;
+}
+.button.--secondary.--green-900:hover {
+  background: rgba(8, 99, 34, 0.1);
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+  width: 195pt;
+  height: 100%;
+  position: fixed;
+  color: #FFFFFF;
+  overflow: scroll;
+  border-right: 1px solid #4F4F50;
+}
+.sidebar .__content {
+  padding: 15pt 20pt;
+}
+.sidebar .__heading {
+  font-size: 18pt;
+  font-weight: 900;
+  margin: 0;
+}
+.sidebar .__menu-section {
+  margin: 30pt 0;
+}
+.sidebar .__menu-item {
+  border-radius: 5pt;
+  margin: 5pt 0;
+  padding: 5pt;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 11pt;
+}
+.sidebar .__menu-item p {
+  margin: 0;
+  padding: 0;
+}
+.sidebar .__menu-item.--active, .sidebar .__menu-item:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.sidebar .__menu-item .material-icons {
+  float: left;
+  margin: 0 5pt 0 0;
+  font-size: 14pt;
+}
+.sidebar .__menu-heading {
+  text-transform: uppercase;
+  color: #A7A7A7;
+  margin: 0;
+  font-size: 10pt;
+  float: left;
+  font-weight: 600;
+}
+.sidebar .__menu-header {
+  height: 12pt;
+}
+.sidebar .__menu-header button {
+  background-color: transparent;
+  position: relative;
+  border: none;
+  float: right;
+  cursor: pointer;
+  border-radius: 5pt;
+  transition: 0.3s;
+  margin: -5pt 0 0 0;
+  color: #A7A7A7;
+  padding: 2pt;
+}
+.sidebar .__menu-header button .material-icons {
+  font-size: 16pt;
+}
+.sidebar .__menu-header button:hover {
+  background-color: rgba(167, 167, 167, 0.2);
+}
+
+/* ====== TOOLBAR ====== */
+.toolbar {
+  padding: 15pt 20pt;
+  width: 100%;
+  max-width: 1763pt;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  backdrop-filter: blur(10pt);
+  -webkit-backdrop-filter: blur(10pt);
+  z-index: 5;
+}
+.toolbar .__heading {
+  font-size: 18pt;
+  font-weight: 600;
+  margin: 0;
+}
+.toolbar .__heading .--secondary {
+  color: #A7A7A7;
+  margin-left: 0pt;
+  font-weight: 300;
+}
+.toolbar.--with-sidebar {
+  margin: 0 0 0 196pt;
+}
+
+.content .--with-toolbar .--with-sidebar .toolbar {
+  margin: 0 0 0 197pt;
+}
+
+/* ====== CARD ====== */
+.card {
+  padding: 20pt;
+  border-radius: 5pt;
+  margin: 15pt 0;
+}
+
+.card::before {
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=bluelight.css.map */

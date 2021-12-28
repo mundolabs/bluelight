@@ -1,0 +1,336 @@
+/*
+
+    ######   #        #     #  #######  #        ###   #####   #     #  ####### 
+    #     #  #        #     #  #        #         #   #     #  #     #     #    
+    #     #  #        #     #  #        #         #   #        #     #     #    
+    ######   #        #     #  #####    #         #   #  ####  #######     #    
+    #     #  #        #     #  #        #         #   #     #  #     #     #    
+    #     #  #        #     #  #        #         #   #     #  #     #     #    
+    ######   #######   #####   #######  #######  ###   #####   #     #     #    
+
+    ===========================================================================
+
+    Developed by Mundo Labs
+    mundolabs.cc
+
+*/
+
+/* ====== CONFIG ====== */
+
+/* Theme */
+@use 'theme';
+
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+/* ========================  /
+/  ====== COMPONENTS ======  /
+/  ======================== */
+
+body {
+    font-family: theme.$primaryFont;
+    color: theme.$text-colour;
+    background-color: theme.$grey-200;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    margin: auto;
+    padding: 0;
+    max-width: 2000pt;
+    background-color: theme.$background-colour;
+    min-height: 900pt;
+    //background-image: url(../images/b2g.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top left;
+
+}
+
+.content {
+    &.--with-sidebar {
+        margin: 0 0 0 195pt;
+        padding: 5pt 20pt 15pt 20pt;
+    }
+
+    &.--with-toolbar {
+        padding: 50pt 20pt 15pt 20pt;
+    }
+}
+
+$colourArray:
+    "white" theme.$white theme.$onWhite,
+    "black" theme.$black theme.$onBlack,
+
+    "grey-100" theme.$grey-100 theme.$onGrey-100,
+    "grey-200" theme.$grey-200 theme.$onGrey-200,
+    "grey-300" theme.$grey-300 theme.$onGrey-300,
+    "grey-400" theme.$grey-400 theme.$onGrey-400,
+    "grey-500" theme.$grey-500 theme.$onGrey-500,
+    "grey-600" theme.$grey-600 theme.$onGrey-600,
+    "grey-700" theme.$grey-700 theme.$onGrey-700,
+    "grey-800" theme.$grey-800 theme.$onGrey-800,
+    "grey-900" theme.$grey-900 theme.$onGrey-900,
+
+    "blue-100" theme.$blue-100 theme.$onBlue-100,
+    "blue-200" theme.$blue-200 theme.$onBlue-200,
+    "blue-300" theme.$blue-300 theme.$onBlue-300,
+    "blue-400" theme.$blue-400 theme.$onBlue-400,
+    "blue-500" theme.$blue-500 theme.$onBlue-500,
+    "blue-600" theme.$blue-600 theme.$onBlue-600,
+    "blue-700" theme.$blue-700 theme.$onBlue-700,
+    "blue-800" theme.$blue-800 theme.$onBlue-800,
+    "blue-900" theme.$blue-900 theme.$onBlue-900,
+
+    "red-100" theme.$red-100 theme.$onRed-100,
+    "red-200" theme.$red-200 theme.$onRed-200,
+    "red-300" theme.$red-300 theme.$onRed-300,
+    "red-400" theme.$red-400 theme.$onRed-400,
+    "red-500" theme.$red-500 theme.$onRed-500,
+    "red-600" theme.$red-600 theme.$onRed-600,
+    "red-700" theme.$red-700 theme.$onRed-700,
+    "red-800" theme.$red-800 theme.$onRed-800,
+    "red-900" theme.$red-900 theme.$onRed-900,
+
+    "green-100" theme.$green-100 theme.$onGreen-100,
+    "green-200" theme.$green-200 theme.$onGreen-200,
+    "green-300" theme.$green-300 theme.$onGreen-300,
+    "green-400" theme.$green-400 theme.$onGreen-400,
+    "green-500" theme.$green-500 theme.$onGreen-500,
+    "green-600" theme.$green-600 theme.$onGreen-600,
+    "green-700" theme.$green-700 theme.$onGreen-700,
+    "green-800" theme.$green-800 theme.$onGreen-800,
+    "green-900" theme.$green-900 theme.$onGreen-900;
+
+@each $i in $colourArray {
+    .--bg-#{nth($i, 1)} {
+        background: nth($i, 2);
+        color: nth($i, 3);
+    }
+
+    .--colour-#{nth($i, 1)} {
+        color: nth($i, 2);
+    }
+}
+
+/* ====== BUTTONS ====== */
+
+.button {
+    border-radius: theme.$button-cornerRadius;
+    font-family: theme.$primaryFont;
+    padding: 6pt 5pt;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    font-size: 12pt;
+    height: 28pt;
+
+    p {
+        padding: 0;
+        margin: 0pt 3pt 0 3pt;
+        float: right;
+    }
+
+    .material-icons {
+        vertical-align: top;
+        margin: -1pt 0 0 0;
+        padding: 0;
+        font-size: 16pt;
+    }
+
+    &:hover {
+        border-radius: theme.$button-cornerRadius--hover;
+        scale: 1.05;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        &:hover {
+            border-radius: theme.$button-cornerRadius;
+            scale: 1;
+        }
+    }
+
+    &.--small {
+        border-radius: theme.$button-cornerRadius - 2;
+        font-size: 10pt;
+        height: 18pt;
+        padding: 3pt 6pt 3pt 4pt;
+
+        .material-icons {
+            vertical-align: top;
+            margin: -0.25pt 0 0 0;
+            font-size: 11pt;
+        }
+
+        p {
+            margin: 0 0 0 1pt;
+        }
+
+        &:hover {
+            border-radius: theme.$button-cornerRadius--hover - 2;
+        }
+
+        &:disabled:hover {
+            border-radius: theme.$button-cornerRadius - 2;
+            scale: 1;
+        }
+    }
+}
+
+@each $i in $colourArray {
+    .button.--primary.--#{nth($i, 1)} {
+        background: linear-gradient(125deg, nth($i, 2) 35%, darken(nth($i, 2), 10%));
+        color: nth($i, 3);
+    }
+
+    .button.--secondary.--#{nth($i, 1)} {
+        background: transparent;
+        color: nth($i, 2);
+
+        &:hover {
+            background: rgba(nth($i, 2), .1);
+        }
+    }
+}
+
+/* ====== SIDEBAR ====== */
+
+.sidebar {
+    width: 195pt;
+    height: 100%;
+    position: fixed;
+    color: theme.$text-colour;
+    overflow: scroll;
+    border-right: 1px solid theme.$grey-700;
+
+    .__content {
+        padding: 15pt 20pt;
+    }
+
+    .__heading {
+        font-size: 18pt;
+        font-weight: 900;
+        margin: 0;
+    }
+
+    .__menu-section {
+        margin: 30pt 0;
+    }
+
+    .__menu-item {
+        border-radius: theme.$sidebarMenu-cornerRadius;
+        margin: 5pt 0;
+        padding: 5pt;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 11pt;
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        &.--active, &:hover  {
+            color: theme.$background-colour;
+            background-color: theme.$text-colour;
+        }
+
+        .material-icons {
+            float: left;
+            margin: 0 5pt 0 0;
+            font-size: 14pt;
+        }
+    }
+
+    .__menu-heading {
+        text-transform: uppercase;
+        color: theme.$grey-500;
+        margin: 0;
+        font-size: 10pt;
+        float: left;
+        font-weight: 600;
+    }
+
+    .__menu-header {
+        height: 12pt;
+
+        button {
+            background-color: transparent;
+            position: relative;
+            border: none;
+            float: right;
+            cursor: pointer;
+            border-radius: theme.$sidebarMenu-cornerRadius;
+            transition: 0.3s;
+            margin: -5pt 0 0 0;
+            color: theme.$grey-500;
+            padding: 2pt;
+
+            .material-icons {
+                font-size: 16pt;
+            }
+
+            &:hover {
+                background-color: rgba(theme.$grey-500, 0.2);
+            }
+        }
+    }
+}
+
+/* ====== TOOLBAR ====== */
+
+.toolbar {
+    padding: 15pt 20pt;
+    width: 100%;
+    max-width: 2000pt - 197pt - 40pt;
+    position: fixed;
+    background-color: rgba(theme.$background-colour, 0.3);
+    color: theme.$text-colour;
+    backdrop-filter: blur(10pt);
+    -webkit-backdrop-filter: blur(10pt);
+    z-index: 5;
+
+    .__heading {
+        font-size: 18pt;
+        font-weight: 600;
+        margin: 0;
+    
+        .--secondary {
+            color: theme.$grey-500;
+            margin-left: 0pt;
+            font-weight: 300;
+        }
+    }
+    
+    &.--with-sidebar {
+        margin: 0 0 0 196pt;
+    }
+}
+
+.content .--with-toolbar .--with-sidebar {
+    .toolbar {
+        margin: 0 0 0 197pt;
+    }
+}
+
+/* ====== CARD ====== */
+
+.card {
+    padding: 20pt;
+    border-radius: theme.$card-cornerRadius;
+    margin: 15pt 0;
+}
+
+.card::before {
+    opacity: 0.5;
+}
